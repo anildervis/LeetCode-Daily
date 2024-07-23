@@ -1,8 +1,27 @@
 class Solution {
 public:
     bool isPowerOfTwo(int n) {
-        if(n == 1) return true;
-       else if(n%2 == 0 && n/2 >= 1) return isPowerOfTwo(n/2);
-       else return false;
+        double result=powerTwo(n);
+        
+
+        if (result==1)
+            return true;
+        else if(result<1)
+            return false;
+        else
+            return false;
+
+        
     }
+    double powerTwo(double n){
+        double result=n;
+        if (result==1)
+            return result;
+        else if(result<1)
+            return result;
+        else
+            return powerTwo(result/2);
+
+    }
+
 };
